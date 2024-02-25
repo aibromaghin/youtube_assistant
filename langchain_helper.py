@@ -5,9 +5,11 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain_community.vectorstores import FAISS
 from dotenv import load_dotenv
+import streamlit as st
 
 # Load API key
 load_dotenv()
+OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
 
 # Utilize embeddings from OpenAI
 embeddings = OpenAIEmbeddings()
